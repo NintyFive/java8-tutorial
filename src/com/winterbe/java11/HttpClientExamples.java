@@ -57,7 +57,7 @@ public class HttpClientExamples {
                 .uri(URI.create("https://postman-echo.com/basic-auth"))
                 .build();
         var response1 = client.send(request1, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response1.statusCode());      // 401
+        System.out.println(response1.statusCode());      // 401 auth failed
 
         var authClient = HttpClient
                 .newBuilder()
